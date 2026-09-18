@@ -119,298 +119,630 @@ footer{padding:18px 0}
   form{grid-template-columns:1fr}
   form input,form textarea,form button,form .form-msg{grid-column:auto}
 }
+/* =========================================
+   PROJECTS / MY WORKS
+========================================= */
+
 .projects-section {
-    padding: 100px 7%;
-    background: #ad60ff;
-    color: #fff;
+    width: 100%;
+    padding: 100px 6%;
+    box-sizing: border-box;
+
+    background: #080A3A;
+    color: #F5F5FF;
+
+    overflow: hidden;
 }
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
 
 .projects-header {
     margin-bottom: 50px;
 }
 
 .projects-header span {
-    color: #a855f7;
+    display: block;
+
+    color: #A855F7;
+
     font-size: 14px;
     font-weight: 700;
+
     letter-spacing: 2px;
+
+    margin-bottom: 12px;
 }
 
 .projects-header h2 {
+    margin: 0;
+
+    color: #F5F5FF;
+
     font-size: 48px;
-    margin-top: 12px;
+    font-weight: 700;
+
+    letter-spacing: -2px;
 }
 
 
-/* CASE STUDY CARD */
+/* =========================================
+   PROJECT CARD
+========================================= */
 
 .project-case {
     position: relative;
 
-    min-height: 480px;
+    width: 100%;
+    min-height: 520px;
 
-    padding: 45px 55px;
     margin-bottom: 30px;
+    padding: 45px 55px;
 
-    border: 1px solid #282b3c;
+    box-sizing: border-box;
+
+    border: 1px solid #252A78;
     border-radius: 26px;
 
     background:
         linear-gradient(
             135deg,
-            #0d0f18,
-            #090a10
+            #0B0D45 0%,
+            #080A3A 100%
         );
 
     overflow: hidden;
 
-    transition: .4s ease;
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
 }
+
+
+/* subtle background grid */
+
+.project-case::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 45px 45px;
+
+    opacity: 0.35;
+
+    pointer-events: none;
+}
+
+
+/* glow */
+
+.project-case::after {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    right: 5%;
+    top: 15%;
+
+    background: radial-gradient(
+        circle,
+        rgba(111, 76, 220, 0.18),
+        transparent 70%
+    );
+
+    filter: blur(20px);
+
+    pointer-events: none;
+}
+
 
 .project-case:hover {
-    border-color: #7075a0;
-    transform: translateY(-4px);
+    transform: translateY(-5px);
+
+    border-color: #5556B5;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.25);
 }
 
 
-/* TOP */
+/* =========================================
+   TOP NUMBER + CATEGORY
+========================================= */
 
 .project-top {
-    display: flex;
-    align-items: center;
-    gap: 14px;
+    position: relative;
 
-    color: #777b89;
+    z-index: 3;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    height: 25px;
+
+    color: #8589A4;
 
     font-size: 10px;
+
     letter-spacing: 2px;
 }
 
+
 .project-number {
-    color: #fff;
-    font-weight: bold;
+    color: #F5F5FF;
+
     font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0;
 }
+
 
 .project-line {
     width: 30px;
+
     height: 1px;
-    background: #555966;
+
+    background: #62667D;
 }
 
 
-/* LAYOUT */
+.project-category {
+    color: #8589A4;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
 
 .project-layout {
+    position: relative;
+
+    z-index: 2;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 50px;
 
-    min-height: 390px;
+    width: 100%;
+
+    min-height: 400px;
 }
 
 
-/* DETAILS */
+/* =========================================
+   LEFT SIDE
+========================================= */
 
 .project-details {
     width: 40%;
-    z-index: 2;
+
+    position: relative;
+
+    z-index: 5;
 }
+
 
 .project-details h3 {
+    margin: 20px 0 25px;
+
+    color: #F5F5FF;
+
     font-size: 58px;
-    line-height: 1;
+
+    line-height: 0.98;
+
+    font-weight: 700;
 
     letter-spacing: -3px;
-
-    margin: 30px 0 22px;
 }
 
+
 .project-details p {
-    color: #9ca0ae;
+    max-width: 410px;
+
+    margin: 0;
+
+    color: #A5A8C0;
 
     font-size: 15px;
 
     line-height: 1.7;
-
-    max-width: 400px;
 }
 
 
-/* TAGS */
+/* =========================================
+   TAGS
+========================================= */
 
 .project-tags {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 8px;
 
-    margin-top: 22px;
+    margin-top: 25px;
 }
 
+
 .project-tags span {
-    border: 1px solid #353947;
+    display: inline-block;
+
+    padding: 7px 13px;
+
+    border: 1px solid #35396A;
 
     border-radius: 20px;
 
-    padding: 7px 12px;
+    color: #AEB2C9;
 
     font-size: 10px;
 
-    color: #aeb2bf;
+    background: rgba(255,255,255,0.01);
 }
 
 
-/* CASE LINK */
+/* =========================================
+   CASE STUDY LINK
+========================================= */
 
 .case-link {
     display: inline-flex;
+
     align-items: center;
+
     gap: 12px;
 
-    margin-top: 45px;
+    margin-top: 48px;
 
-    color: #fff;
+    color: #F5F5FF;
 
     text-decoration: none;
 
     font-size: 13px;
+
     font-weight: 600;
+
+    transition: 0.3s ease;
 }
+
 
 .case-link b {
-    font-size: 20px;
+    font-size: 21px;
 
-    transition: .3s;
+    font-weight: 400;
+
+    transition: transform 0.3s ease;
 }
+
+
+.case-link:hover {
+    color: #C084FC;
+}
+
 
 .case-link:hover b {
     transform: translateX(7px);
 }
 
 
-/* IMAGE */
+/* =========================================
+   RIGHT SIDE IMAGE
+========================================= */
 
 .project-visual {
+    position: relative;
+
     width: 57%;
 
+    min-height: 350px;
+
     display: flex;
-    justify-content: center;
+
     align-items: center;
 
-    position: relative;
+    justify-content: center;
 }
+
+
+/* image glow */
 
 .project-visual::before {
     content: "";
 
     position: absolute;
 
-    width: 450px;
-    height: 350px;
+    width: 480px;
+    height: 360px;
 
     background: radial-gradient(
         circle,
-        rgba(80, 70, 180, .25),
+        rgba(90, 80, 210, 0.22),
         transparent 70%
     );
 
-    filter: blur(30px);
+    filter: blur(25px);
 }
+
+
+/* image */
 
 .project-visual img {
     position: relative;
 
-    width: 100%;
-    max-width: 580px;
+    z-index: 2;
 
-    max-height: 350px;
+    display: block;
+
+    width: 100%;
+
+    max-width: 600px;
+
+    max-height: 370px;
 
     object-fit: contain;
 
     border-radius: 12px;
 
-    z-index: 1;
-
-    transition: .5s;
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
 }
+
 
 .project-case:hover .project-visual img {
-    transform: scale(1.03);
+    transform: scale(1.035);
+
+    filter:
+        drop-shadow(
+            0 25px 35px rgba(0,0,0,0.35)
+        );
 }
 
 
-/* ARROW */
+/* =========================================
+   ROUND ARROW
+========================================= */
 
 .project-arrow {
     position: absolute;
 
+    z-index: 10;
+
     right: 25px;
     top: 25px;
 
-    width: 42px;
-    height: 42px;
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid #454A67;
 
     border-radius: 50%;
 
-    border: 1px solid #3d414f;
-
     background: transparent;
 
-    color: #fff;
+    color: #F5F5FF;
 
     font-size: 18px;
 
     cursor: pointer;
 
-    transition: .3s;
+    transition: all 0.3s ease;
 }
+
 
 .project-arrow:hover {
-    background: #fff;
-    color: #08090f;
+    background: #F5F5FF;
+
+    color: #080A3A;
+
+    border-color: #F5F5FF;
+
+    transform: rotate(45deg);
 }
 
 
-/* MOBILE */
+/* =========================================
+   TABLET
+========================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+
+    .projects-section {
+        padding: 80px 5%;
+    }
+
+    .project-case {
+        padding: 40px;
+    }
+
+    .project-layout {
+        gap: 30px;
+    }
+
+    .project-details h3 {
+        font-size: 45px;
+    }
+
+    .project-details {
+        width: 42%;
+    }
+
+    .project-visual {
+        width: 55%;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
 
     .projects-section {
         padding: 70px 5%;
     }
 
-    .project-case {
-        padding: 30px;
-
-        min-height: auto;
+    .projects-header {
+        margin-bottom: 35px;
     }
+
+    .projects-header h2 {
+        font-size: 38px;
+    }
+
+
+    .project-case {
+        min-height: auto;
+
+        padding: 30px 25px;
+
+        border-radius: 20px;
+    }
+
+
+    .project-top {
+        padding-right: 45px;
+    }
+
+
+    .project-category {
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+    }
+
 
     .project-layout {
         flex-direction: column;
 
         align-items: flex-start;
 
+        gap: 30px;
+
         min-height: auto;
 
-        padding-top: 25px;
+        padding-top: 20px;
     }
 
-    .project-details,
-    .project-visual {
+
+    .project-details {
         width: 100%;
     }
 
+
     .project-details h3 {
-        font-size: 42px;
+        margin-top: 15px;
+
+        font-size: 40px;
+
+        letter-spacing: -2px;
     }
 
-    .project-visual {
-        margin-top: 25px;
+
+    .project-details p {
+        font-size: 14px;
     }
+
+
+    .project-visual {
+        width: 100%;
+
+        min-height: 250px;
+    }
+
 
     .project-visual img {
         max-height: 280px;
+    }
+
+
+    .case-link {
+        margin-top: 30px;
+    }
+
+
+    .project-arrow {
+        width: 38px;
+        height: 38px;
+
+        right: 18px;
+        top: 18px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .project-case {
+        padding: 25px 20px;
+    }
+
+    .project-details h3 {
+        font-size: 34px;
+    }
+
+    .project-category {
+        font-size: 7px;
+    }
+
+    .project-tags span {
+        font-size: 9px;
+
+        padding: 6px 10px;
+    }
+
+    .project-visual {
+        min-height: 200px;
+    }
+
+    .project-visual img {
+        max-height: 220px;
     }
 }
