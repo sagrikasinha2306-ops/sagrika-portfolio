@@ -154,7 +154,7 @@ footer{padding:18px 0}
 
   position: absolute;
 
-  width: 250px;
+  width: 150px;
   height: 250px;
 
   top: -100px;
@@ -298,7 +298,7 @@ footer{padding:18px 0}
 .process-card {
   position: relative;
 
-  min-height: 285px;
+  min-height: 200px;
 
   padding: 30px;
 
