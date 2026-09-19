@@ -29,7 +29,7 @@ html {
 
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: 200px;
   font-family: Inter, Arial, sans-serif;
   line-height: 1.6;
   color: var(--text);
