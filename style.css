@@ -29,9 +29,9 @@ html {
 
 body {
   margin: 0;
-  min-width: 200px;
+  min-width: 320px;
   font-family: Inter, Arial, sans-serif;
-  line-height: 1.6;
+  line-height: .95;
   color: var(--text);
   background:
     radial-gradient(circle at 82% 4%, rgba(99, 102, 241, 0.22), transparent 32rem),
