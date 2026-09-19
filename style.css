@@ -314,7 +314,7 @@ p {
 }
 
 h1 {
-  max-width: 850px;
+  max-width: 500px;
   margin-bottom: 24px;
   font-size: clamp(3.2rem, 8vw, 6.8rem);
   line-height: .95;
