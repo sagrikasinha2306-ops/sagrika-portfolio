@@ -314,10 +314,10 @@ p {
 }
 
 h1 {
-  max-width: 500px;
+  max-width: 850px;
   margin-bottom: 24px;
   font-size: clamp(3.2rem, 8vw, 6.8rem);
-  line-height: .95;
+  line-height: .78;
   letter-spacing: -.055em;
   color: transparent;
   background: linear-gradient(120deg, #ffffff 0%, #ffffff 24%, var(--accent-2) 46%, var(--accent) 72%, var(--hot) 100%);
