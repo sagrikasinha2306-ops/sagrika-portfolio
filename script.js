@@ -124,5 +124,5 @@ contactForm.addEventListener("submit", event => {
   const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
 
   formMsg.textContent = "Opening your email app...";
-  window.location.href = `mailto:kumarisagrika137@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = `mailto:kumarisagarika137@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
