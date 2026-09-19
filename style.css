@@ -315,9 +315,9 @@ p {
 
 h1 {
   max-width: 850px;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   font-size: clamp(3.2rem, 8vw, 6.8rem);
-  line-height: .78;
+  line-height: .95;
   letter-spacing: -.055em;
   color: transparent;
   background: linear-gradient(120deg, #ffffff 0%, #ffffff 24%, var(--accent-2) 46%, var(--accent) 72%, var(--hot) 100%);
