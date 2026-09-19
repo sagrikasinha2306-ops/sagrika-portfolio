@@ -31,7 +31,7 @@ scroll-behavior: smooth;
 
 body {
 margin: 0;
-min-width: 100px;
+min-width: 320px;
 font-family: Inter, Arial, sans-serif;
 line-height: 1.6;
 color: var(--text);
