@@ -126,3 +126,111 @@ contactForm.addEventListener("submit", event => {
   formMsg.textContent = "Opening your email app...";
   window.location.href = `mailto:kumarisagarika137@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
+// =======================================
+// SCROLL REVEAL ANIMATION
+// =======================================
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+const observer =
+    new IntersectionObserver(
+        (entries) => {
+
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("active");
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+revealElements.forEach((element) => {
+
+    observer.observe(element);
+
+});
+
+
+// =======================================
+// CARD INTERACTION
+// =======================================
+
+const cards =
+    document.querySelectorAll(".skill-card");
+
+
+cards.forEach((card) => {
+
+    card.addEventListener("click", () => {
+
+        cards.forEach((item) => {
+
+            item.classList.remove("selected");
+
+        });
+
+        card.classList.add("selected");
+
+    });
+
+});
+
+
+// =======================================
+// MOUSE PARALLAX EFFECT
+// =======================================
+
+cards.forEach((card) => {
+
+    card.addEventListener("mousemove", (event) => {
+
+        const rect =
+            card.getBoundingClientRect();
+
+        const x =
+            event.clientX - rect.left;
+
+        const y =
+            event.clientY - rect.top;
+
+        const centerX =
+            rect.width / 2;
+
+        const centerY =
+            rect.height / 2;
+
+        const rotateX =
+            ((y - centerY) / centerY) * -2;
+
+        const rotateY =
+            ((x - centerX) / centerX) * 2;
+
+        card.style.transform =
+            `translateY(-8px)
+             rotateX(${rotateX}deg)
+             rotateY(${rotateY}deg)`;
+
+    });
+
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.transform =
+            "translateY(0) rotateX(0) rotateY(0)";
+
+    });
+
+});
