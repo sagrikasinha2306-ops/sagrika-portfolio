@@ -3,743 +3,661 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Contact | Portfolio</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+  <meta name="description" content="Sagrika Sinha is a UI/UX designer creating clean, accessible, and user-friendly digital experiences for web and mobile products." />
+  <meta name="theme-color" content="#090a12" />
+  <meta property="og:title" content="Sagrika Sinha | UI/UX Designer" />
+  <meta property="og:description" content="A portfolio of UI/UX work across mobile apps, dashboards, healthcare, e-commerce, and student productivity tools." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="sagrikaImage.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sagrika Sinha | UI/UX Designer" />
+  <meta name="twitter:description" content="Clean, thoughtful UI/UX design for useful digital products." />
+  <link rel="canonical" href="./" />
+  <title>Sagrika Sinha | UI/UX Designer</title>
+  <link rel="icon" href="sagrikaImage.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <noscript>
+    <style>
+      body { opacity: 1; transform: none; }
+      .reveal { opacity: 1; transform: none; filter: none; }
+    </style>
+  </noscript>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sagrika Sinha",
+      "jobTitle": "UI/UX Designer",
+    <a href="mailto:kumarisagarika137@gmail.com">Email Me</a>
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Bihar",
+        "addressCountry": "IN"
+      },
+      "url": ".",
+      "sameAs": [
+        "https://www.behance.net/sagrikashinha1"
+      ]
     }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #070a20;
-      color: #fff;
-      min-height: 100vh;
-    }
-
-    /* =========================
-       CONTACT SECTION
-    ========================= */
-
-    .contact-section {
-      width: 100%;
-      min-height: 100vh;
-      padding: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      background:
-        radial-gradient(circle at 15% 20%, rgba(91, 75, 255, 0.15), transparent 30%),
-        radial-gradient(circle at 85% 80%, rgba(185, 70, 255, 0.12), transparent 30%),
-        #070a20;
-    }
-
-    .contact-container {
-      width: 100%;
-      max-width: 1500px;
-      min-height: 680px;
-
-      padding: 55px;
-
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      align-items: center;
-
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 30px;
-
-      background:
-        linear-gradient(
-          135deg,
-          rgba(30, 34, 61, 0.96),
-          rgba(12, 15, 38, 0.96)
-        );
-
-      box-shadow:
-        0 30px 100px rgba(0, 0, 0, 0.35),
-        inset 0 1px 0 rgba(255, 255, 255, 0.04);
-    }
-
-    /* =========================
-       LEFT CONTENT
-    ========================= */
-
-    .contact-left {
-      position: relative;
-    }
-
-    .contact-label {
-      display: inline-block;
-
-      padding: 12px 22px;
-      margin-bottom: 28px;
-
-      border-radius: 30px;
-
-      background: linear-gradient(135deg, #6756ff, #4b65ed);
-
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 3px;
-
-      box-shadow: 0 8px 25px rgba(91, 83, 255, 0.25);
-    }
-
-    .contact-title {
-      max-width: 650px;
-
-      font-size: clamp(48px, 5vw, 76px);
-      line-height: 0.98;
-      letter-spacing: -3px;
-      font-weight: 800;
-
-      margin-bottom: 28px;
-    }
-
-    .gradient-text {
-      background: linear-gradient(
-        90deg,
-        #765cff,
-        #a68cff,
-        #536cff
-      );
-
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .contact-description {
-      max-width: 610px;
-
-      color: #b8bad0;
-      font-size: 18px;
-      line-height: 1.7;
-
-      margin-bottom: 35px;
-    }
-
-    /* =========================
-       SOCIAL LINKS
-    ========================= */
-
-    .contact-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin-bottom: 40px;
-    }
-
-    .contact-link {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-
-      color: #fff;
-      text-decoration: none;
-
-      font-weight: 600;
-      font-size: 16px;
-
-      transition: 0.3s ease;
-    }
-
-    .contact-link:hover {
-      transform: translateY(-3px);
-      color: #9a8cff;
-    }
-
-    .link-icon {
-      width: 45px;
-      height: 45px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      border-radius: 14px;
-
-      background: linear-gradient(
-        135deg,
-        #745cff,
-        #446cff
-      );
-
-      font-size: 19px;
-
-      box-shadow: 0 8px 25px rgba(80, 80, 255, 0.25);
-    }
-
-    .link-text {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-
-    .link-text small {
-      color: #9c9eb7;
-      font-size: 12px;
-    }
-
-    /* =========================
-       DECORATION
-    ========================= */
-
-    .decoration {
-      position: relative;
-      height: 150px;
-      margin-top: 10px;
-    }
-
-    .blob {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-
-      width: 250px;
-      height: 100px;
-
-      border-radius: 50% 50% 15px 15px;
-
-      background: linear-gradient(
-        135deg,
-        rgba(104, 76, 255, 0.8),
-        rgba(67, 57, 160, 0.4)
-      );
-
-      filter: blur(1px);
-    }
-
-    .laptop {
-      position: absolute;
-      left: 90px;
-      bottom: 20px;
-
-      width: 190px;
-      height: 115px;
-
-      border: 7px solid #8b82d8;
-      border-bottom-width: 14px;
-
-      border-radius: 12px;
-
-      background: linear-gradient(
-        135deg,
-        #29274e,
-        #11142b
-      );
-
-      transform: perspective(500px) rotateX(3deg);
-    }
-
-    .laptop::after {
-      content: "";
-
-      position: absolute;
-      left: -30px;
-      bottom: -25px;
-
-      width: 245px;
-      height: 15px;
-
-      border-radius: 50px;
-
-      background: #7e78b9;
-    }
-
-    .plant {
-      position: absolute;
-      left: 300px;
-      bottom: 20px;
-
-      font-size: 60px;
-    }
-
-    /* =========================
-       FORM CARD
-    ========================= */
-
-    .contact-form-card {
-      padding: 38px;
-
-      border: 1px solid rgba(150, 150, 220, 0.18);
-      border-radius: 25px;
-
-      background:
-        linear-gradient(
-          145deg,
-          rgba(28, 32, 63, 0.9),
-          rgba(16, 19, 43, 0.85)
-        );
-
-      box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.04);
-    }
-
-    .form-group {
-      margin-bottom: 25px;
-    }
-
-    .form-group label {
-      display: block;
-
-      margin-bottom: 10px;
-
-      color: #ddddef;
-
-      font-size: 16px;
-      font-weight: 700;
-    }
-
-    .input-wrapper {
-      position: relative;
-    }
-
-    .input-icon {
-      position: absolute;
-
-      left: 18px;
-      top: 50%;
-
-      transform: translateY(-50%);
-
-      color: #9c91ff;
-
-      font-size: 19px;
-      pointer-events: none;
-    }
-
-    .form-control {
-      width: 100%;
-
-      padding: 17px 18px 17px 52px;
-
-      border: 1px solid rgba(170, 170, 220, 0.22);
-      border-radius: 16px;
-
-      outline: none;
-
-      background: rgba(32, 36, 65, 0.8);
-
-      color: #fff;
-
-      font-size: 15px;
-
-      transition: 0.3s ease;
-    }
-
-    textarea.form-control {
-      min-height: 145px;
-      resize: vertical;
-
-      padding-top: 18px;
-    }
-
-    .form-control::placeholder {
-      color: #8588a9;
-    }
-
-    .form-control:focus {
-      border-color: #7565ff;
-
-      box-shadow:
-        0 0 0 3px rgba(111, 93, 255, 0.12),
-        0 0 25px rgba(111, 93, 255, 0.12);
-    }
-
-    /* =========================
-       BUTTON
-    ========================= */
-
-    .submit-btn {
-      width: 100%;
-
-      padding: 18px;
-
-      border: none;
-      border-radius: 35px;
-
-      background: linear-gradient(
-        90deg,
-        #735cff,
-        #4b67ff
-      );
-
-      color: #080a19;
-
-      font-size: 17px;
-      font-weight: 800;
-
-      cursor: pointer;
-
-      transition: 0.3s ease;
-
-      box-shadow:
-        0 15px 35px rgba(93, 78, 255, 0.35);
-    }
-
-    .submit-btn:hover {
-      transform: translateY(-3px);
-
-      box-shadow:
-        0 20px 45px rgba(93, 78, 255, 0.5);
-    }
-
-    .submit-btn:active {
-      transform: translateY(0);
-    }
-
-    /* =========================
-       SUCCESS MESSAGE
-    ========================= */
-
-    .success-message {
-      display: none;
-
-      margin-top: 18px;
-      padding: 14px;
-
-      border-radius: 12px;
-
-      text-align: center;
-
-      background: rgba(53, 211, 153, 0.1);
-      border: 1px solid rgba(53, 211, 153, 0.3);
-
-      color: #61e6b0;
-    }
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
-
-    @media (max-width: 1000px) {
-
-      .contact-container {
-        grid-template-columns: 1fr;
-
-        gap: 50px;
-
-        padding: 40px;
-      }
-
-      .contact-title {
-        max-width: 700px;
-      }
-
-      .decoration {
-        display: none;
-      }
-    }
-
-    @media (max-width: 600px) {
-
-      .contact-section {
-        padding: 15px;
-      }
-
-      .contact-container {
-        padding: 28px 20px;
-
-        border-radius: 22px;
-      }
-
-      .contact-form-card {
-        padding: 22px 17px;
-      }
-
-      .contact-title {
-        font-size: 45px;
-        letter-spacing: -2px;
-      }
-
-      .contact-description {
-        font-size: 15px;
-      }
-
-      .contact-links {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .contact-label {
-        font-size: 12px;
-      }
-    }
-  </style>
+  </script>
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <section class="contact-section">
+  <header class="site-header" id="siteHeader">
+    <div class="container nav">
+      <a href="#home" class="brand" aria-label="Sagrika Sinha home">
+        <span>Sagrika Sinha</span>
+       
+      </a>
 
-    <div class="contact-container">
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span>
+        <span></span>
+      </button>
 
-      <!-- ================= LEFT ================= -->
+      <nav class="nav-links" id="navMenu" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-      <div class="contact-left">
+      <a class="btn btn-small nav-cta" href="#contact">Let's Talk</a>
+    </div>
+  </header>
 
-        <div class="contact-label">
-          05 — CONTACT
-        </div>
-
-        <h1 class="contact-title">
-          Have a
-          <span class="gradient-text">product</span>
-          or
-          <span class="gradient-text">design</span>
-          role in mind?
-        </h1>
-
-        <p class="contact-description">
-          Let's talk about UI/UX work, portfolio projects,
-          freelance collaboration, or full-time opportunities.
-        </p>
-
-        <div class="contact-links">
-
-          <a
-            href="mailto:yourmail@gmail.com"
-            class="contact-link"
-          >
-            <span class="link-icon">✉</span>
-
-            <span class="link-text">
-              <small>Email Me</small>
-              yourmail@gmail.com
-            </span>
-          </a>
-
-          <a
-            href="https://www.behance.net/"
-            target="_blank"
-            class="contact-link"
-          >
-            <span class="link-icon">Bē</span>
-
-            <span class="link-text">
-              <small>Portfolio</small>
-              Behance
-            </span>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/"
-            target="_blank"
-            class="contact-link"
-          >
-            <span class="link-icon">in</span>
-
-            <span class="link-text">
-              <small>Connect</small>
-              LinkedIn
-            </span>
-          </a>
-
-        </div>
-
-        <div class="decoration">
-
-          <div class="blob"></div>
-
-          <div class="laptop"></div>
-
-          <div class="plant">
-            🌱
+  <main id="main">
+    <section class="hero section-pad" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">UI/UX Designer</p>
+          <h1>I design clean digital experiences that are useful, calm, and easy to use.</h1>
+          <p class="hero-lead">I’m Sagrika Sinha, a UI/UX designer focused on thoughtful web and mobile interfaces, clear user flows, and polished prototypes.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#work">View My Work</a>
+            <a class="btn btn-secondary" href="#contact">Let's Connect</a>
           </div>
-
+          <div class="status-row" aria-label="Availability">
+            <span class="status-dot"></span>
+            <span>Available for freelance and full-time UI/UX opportunities</span>
+          </div>
         </div>
 
+        <div class="hero-visual reveal" aria-label="Portrait of Sagrika Sinha">
+          <div class="portrait-card">
+            <img src="sagrikaImage.png" alt="Sagrika Sinha" width="1215" height="1295" decoding="async" />
+          </div>
+          <div class="floating-note note-one">User flows</div>
+          <div class="floating-note note-two">Wireframes</div>
+          <div class="floating-note note-three">Prototypes</div>
+        </div>
       </div>
+    </section>
 
-
-      <!-- ================= FORM ================= -->
-
-      <div class="contact-form-card">
-
-        <form id="contactForm">
-
-          <!-- Name -->
-
-          <div class="form-group">
-
-            <label for="name">
-              Name
-            </label>
-
-            <div class="input-wrapper">
-
-              <span class="input-icon">
-                ♙
-              </span>
-
-              <input
-                type="text"
-                id="name"
-                class="form-control"
-                placeholder="Your name"
-                required
-              />
-
-            </div>
-
-          </div>
-
-
-          <!-- Email -->
-
-          <div class="form-group">
-
-            <label for="email">
-              Email
-            </label>
-
-            <div class="input-wrapper">
-
-              <span class="input-icon">
-                ✉
-              </span>
-
-              <input
-                type="email"
-                id="email"
-                class="form-control"
-                placeholder="Your email address"
-                required
-              />
-
-            </div>
-
-          </div>
-
-
-          <!-- Message -->
-
-          <div class="form-group">
-
-            <label for="message">
-              Message
-            </label>
-
-            <div class="input-wrapper">
-
-              <span
-                class="input-icon"
-                style="top: 25px;"
-              >
-                💬
-              </span>
-
-              <textarea
-                id="message"
-                class="form-control"
-                placeholder="Tell me about your project..."
-                required
-              ></textarea>
-
-            </div>
-
-          </div>
-
-
-          <!-- Button -->
-
-          <button
-            type="submit"
-            class="submit-btn"
-          >
-            ✈ &nbsp; Email Me
-          </button>
-
-
-          <div
-            class="success-message"
-            id="successMessage"
-          >
-            ✓ Thank you! Your message is ready to send.
-          </div>
-
-        </form>
-
+    <section class="proof">
+      <div class="container proof-grid reveal">
+        <div>
+          <strong>4</strong>
+          <span>Selected projects</span>
+        </div>
+        <div>
+          <strong>5</strong>
+          <span>Design tools</span>
+        </div>
+        <div>
+          <strong>2026</strong>
+          <span>Design experience started</span>
+        </div>
+        <div>
+          <strong>Open</strong>
+          <span>Freelance and full-time roles</span>
+        </div>
       </div>
+    </section>
+
+    <section class="section-pad" id="work">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">01 - Work</p>
+          <h2>Selected Work</h2>
+          <p>A focused look at projects across productivity, healthcare, e-commerce, and dashboard design.</p>
+        </div>
+
+        <div class="work-list">
+          <article class="project-card reveal">
+            <div class="project-content">
+              <p class="project-kicker">Student Productivity</p>
+              <h3>Student Task Manager</h3>
+              <p>A mobile experience for students to organize assignments, deadlines, reminders, and daily study tasks.</p>
+              <dl class="project-meta">
+                <div><dt>Role</dt><dd>UI/UX Design</dd></div>
+                <div><dt>Tools</dt><dd>Figma, Prototype</dd></div>
+              </dl>
+              <a class="text-link" href="https://www.behance.net/gallery/249644427/Student-Task-Manager-App-UIUX-Case-Study?tracking_source=project_owner_other_projects" target="_blank" rel="noreferrer">View case study <span>→</span></a>
+            </div>
+            <a class="project-media wide" href="https://www.behance.net/gallery/249644427/Student-Task-Manager-App-UIUX-Case-Study?tracking_source=project_owner_other_projects" target="_blank" rel="noreferrer" aria-label="Open Student Task Manager case study">
+              <img src="assets/student-task-manager.jpeg" alt="Student Task Manager app presentation" loading="lazy" decoding="async" />
+            </a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-content">
+              <p class="project-kicker">Healthcare Experience</p>
+              <h3>Doctor Appointment App</h3>
+              <p>A healthcare appointment concept designed to make patient management and booking feel simple and trustworthy.</p>
+              <dl class="project-meta">
+                <div><dt>Role</dt><dd>UI/UX Design</dd></div>
+                <div><dt>Tools</dt><dd>Figma, Visual Design</dd></div>
+              </dl>
+              <a class="text-link" href="https://www.behance.net/gallery/249850427/doctor-appointment?tracking_source=project_owner_other_projects" target="_blank" rel="noreferrer">View case study <span>→</span></a>
+            </div>
+            <a class="project-media poster" href="https://www.behance.net/gallery/249850427/doctor-appointment?tracking_source=project_owner_other_projects" target="_blank" rel="noreferrer" aria-label="Open Doctor Appointment App case study">
+              <img src="assets/doctor-appointment.jpeg" alt="Doctor appointment app poster design" loading="lazy" decoding="async" />
+            </a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-content">
+              <p class="project-kicker">E-commerce Experience</p>
+              <h3>BuyNest E-commerce Website</h3>
+              <p>A fashion shopping concept with clear category browsing, product discovery, and polished storefront hierarchy.</p>
+              <dl class="project-meta">
+                <div><dt>Role</dt><dd>Website UI Design</dd></div>
+                <div><dt>Tools</dt><dd>Figma, Web Design</dd></div>
+              </dl>
+              <a class="text-link" href="https://www.behance.net/gallery/249642695/ecommerce-website?tracking_source=project_owner_other_projects" target="_blank" rel="noreferrer">View case study <span>→</span></a>
+            </div>
+            <a class="project-media poster" href="https://www.behance.net/gallery/249642695/ecommerce-website?tracking_source=project_owner_other_projects" target="_blank" rel="noreferrer" aria-label="Open BuyNest e-commerce case study">
+              <img src="assets/ecommerce.jpeg" alt="BuyNest e-commerce website design" loading="lazy" decoding="async" />
+            </a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-content">
+              <p class="project-kicker">Dashboard Experience</p>
+              <h3>TalentBridge Dashboard</h3>
+              <p>A dashboard interface for monitoring employee data, attendance, leave, payroll, and team operations.</p>
+              <dl class="project-meta">
+                <div><dt>Role</dt><dd>Dashboard UI Design</dd></div>
+                <div><dt>Tools</dt><dd>Figma, Information Design</dd></div>
+              </dl>
+              <a class="text-link" href="https://www.behance.net/gallery/249852199/responsive-design" target="_blank" rel="noreferrer">View case study <span>→</span></a>
+            </div>
+            <a class="project-media wide" href="https://www.behance.net/gallery/249852199/responsive-design" target="_blank" rel="noreferrer" aria-label="Open TalentBridge Dashboard case study">
+              <img src="assets/dashboard.jpeg" alt="TalentBridge HR dashboard UI" loading="lazy" decoding="async" />
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad section-muted" id="experience">
+      <div class="container two-column">
+        <div class="section-heading reveal">
+          <p class="eyebrow">02 - Experience</p>
+          <h2>Design practice shaped by real product work.</h2>
+          <p>Focused on responsive screens, design systems, prototypes, and developer-ready handoff.</p>
+        </div>
+
+        <div class="timeline reveal">
+          <article>
+            <span>March 2026 - Present</span>
+            <h3>UI/UX Designer - SUH Tech Company</h3>
+            <p>Designing responsive interfaces and interactive prototypes while collaborating with developers to keep implementation aligned with product goals.</p>
+            <ul>
+              <li>Created user flows, wireframes, and visual screens in Figma.</li>
+              <li>Refined layouts based on feedback and usability needs.</li>
+              <li>Prepared UI details for handoff and responsive implementation.</li>
+            </ul>
+          </article>
+          <article>
+            <span>2021 - 2025</span>
+            <h3>Bachelor in Computer Science & Engineering</h3>
+            <p>Maharishi Markandeshwar University, Haryana.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+   
+
+<section class="skills-section">
+
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="skills-header reveal">
+
+            <span class="section-number">
+                03 - SKILLS
+            </span>
+
+            <h1>
+                Skills, tools, and methods I use to turn
+                ideas into
+                <span>intuitive product experiences.</span>
+            </h1>
+
+            <p>
+                As a UI/UX designer, I combine design thinking, user research,
+                and modern tools to create user-centered solutions that are
+                simple, useful and delightful.
+            </p>
+
+        </div>
+
+
+        <!-- Skills Grid -->
+        <div class="skills-grid">
+
+
+            <!-- Card 1 -->
+            <div class="skill-card reveal">
+
+                <div class="card-top">
+
+                    <div class="icon purple">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+
+                    <div class="arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+
+                </div>
+
+                <h2>Design</h2>
+
+                <p>
+                    Create clean, modern and engaging interfaces
+                    that feel natural and easy to use.
+                </p>
+
+                <div class="divider"></div>
+
+                <div class="tags">
+
+                    <span>
+                        <i class="fa-solid fa-desktop"></i>
+                        UI Design
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        Responsive Design
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-arrow-pointer"></i>
+                        Interactive Design
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-palette"></i>
+                        Visual Design
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Card 2 -->
+            <div class="skill-card reveal">
+
+                <div class="card-top">
+
+                    <div class="icon blue">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div class="arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+
+                </div>
+
+                <h2>Research & UX</h2>
+
+                <p>
+                    Understand users, solve real problems and
+                    design with purpose.
+                </p>
+
+                <div class="divider"></div>
+
+                <div class="tags">
+
+                    <span>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        User Research
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-user"></i>
+                        User Personas
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-diagram-project"></i>
+                        User Flows
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-table-cells"></i>
+                        Wireframing
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-flask"></i>
+                        Usability Testing
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Card 3 -->
+            <div class="skill-card reveal">
+
+                <div class="card-top">
+
+                    <div class="icon green">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+
+                    <div class="arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+
+                </div>
+
+                <h2>Tools</h2>
+
+                <p>
+                    Use the right tools to bring ideas to life
+                    and work efficiently.
+                </p>
+
+                <div class="divider"></div>
+
+                <div class="tags">
+
+                    <span>Figma</span>
+                    <span>FigJam</span>
+                    <span>Photoshop</span>
+                    <span>Canva</span>
+                    <span>Framer</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Card 4 -->
+            <div class="skill-card reveal">
+
+                <div class="card-top">
+
+                    <div class="icon pink">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+
+                    <div class="arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+
+                </div>
+
+                <h2>Systems & Delivery</h2>
+
+                <p>
+                    Build consistent experiences and ensure
+                    smooth handoff and execution.
+                </p>
+
+                <div class="divider"></div>
+
+                <div class="tags">
+
+                    <span>Design Systems</span>
+                    <span>Components</span>
+                    <span>Prototyping</span>
+                    <span>Design Handoff</span>
+                    <span>Auto Layout</span>
+                    <span>Design Tokens</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Card 5 -->
+            <div class="skill-card reveal">
+
+                <div class="card-top">
+
+                    <div class="icon orange">
+                       
+                    </div>
+ <div class="arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    
+
+                </div>
+
+                <h2>UX Strategy</h2>
+
+                <p>
+                    Turn insights into clear direction and
+                    effective solutions.
+                </p>
+                <div class="divider"></div>
+
+              
+
+                <div class="tags">
+
+                    <span>Problem Solving</span>
+                    <span>User Journey Mapping</span>
+                    <span>Information Architecture</span>
+                    <span>Personas & Research</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Card 6 -->
+            <div class="skill-card reveal">
+
+                <div class="card-top">
+
+                    <div class="icon magenta">
+                        <i class="fa-solid fa-arrow-pointer"></i>
+                    </div>
+
+                    <div class="arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+
+                </div>
+
+                <h2>Interaction Design</h2>
+
+                <p>
+                    Bring interfaces to life with smooth,
+                    meaningful and delightful interactions.
+                </p>
+
+                <div class="divider"></div>
+
+                <div class="tags">
+
+                    <span>Micro Interactions</span>
+                    <span>Animations</span>
+                    <span>Transitions</span>
+                    <span>Prototyping</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Card 7 -->
+            <div class="skill-card reveal">
+
+                <div class="card-top">
+
+                    <div class="icon violet">
+                        <i class="fa-solid fa-universal-access"></i>
+                    </div>
+
+                    <div class="arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+
+                </div>
+
+                <h2>Accessibility</h2>
+
+                <p>
+                    Design inclusive experiences that work
+                    for everyone.
+                </p>
+
+                <div class="divider"></div>
+
+                <div class="tags">
+
+                    <span>Color Contrast</span>
+                    <span>Keyboard Navigation</span>
+                    <span>Screen Reader</span>
+                    <span>Inclusive Design</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Card 8 -->
+            <div class="skill-card reveal">
+
+                <div class="card-top">
+
+                    <div class="icon cyan">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+
+                    <div class="arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+
+                </div>
+
+                <h2>Communication</h2>
+
+                <p>
+                    Collaborate, share and align with teams
+                    for better outcomes.
+                </p>
+
+                <div class="divider"></div>
+
+                <div class="tags">
+
+                    <span>Design Presentations</span>
+                    <span>Documentation</span>
+                    <span>Feedback & Iteration</span>
+                    <span>Team Collaboration</span>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- ================= JAVASCRIPT ================= -->
 
-  <script>
+    <section class="section-pad section-muted" id="about">
+      <div class="container about-grid">
+        <div class="about-photo reveal">
+          <img src="sagrikaImage.png" alt="Portrait of Sagrika Sinha" loading="lazy" decoding="async" />
+        </div>
+        <div class="section-heading reveal">
+          <p class="eyebrow">04 - About</p>
+          <h2>Designing with clarity, care, and attention to everyday use.</h2>
+          <p>I’m a UI/UX designer from India, with a computer science background and a growing focus on digital product design. I enjoy turning rough ideas into clear screens, practical flows, and prototypes that help teams see how a product should work.</p>
+          <p>My current direction is to keep improving across research, interaction design, responsive interfaces, and handoff so the final product feels simple for users and practical for developers.</p>
+        </div>
+      </div>
+    </section>
 
-    const contactForm =
-      document.getElementById("contactForm");
+    <section class="section-pad contact-section" id="contact">
+      <div class="container contact-card reveal">
+        <div>
+          <p class="eyebrow">05 - Contact</p>
+          <h2>Have a product or design role in mind?</h2>
+          <p>Let’s talk about UI/UX work, portfolio projects, freelance collaboration, or full-time opportunities.</p>
+          <div class="contact-links">
+            <a href="mailto:kumarisagarika137@gmail.com">Email Me</a>
+        
+            <a href="tel:+916299954537">+91 6299954537</a>
+            <a href="https://www.behance.net/sagrikasinha1" target="_blank" rel="noreferrer">Behance</a>
+            <a href="https://www.linkedin.com/in/sagrika-sinha-44220522a/" target="_blank" rel="noreferrer">Linkedin</a>
+          </div>
+        </div>
 
-    const successMessage =
-      document.getElementById("successMessage");
+        <form id="contactForm" novalidate>
+          <label>
+            <span>Name</span>
+            <input required name="name" autocomplete="name" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input required type="email" name="email" autocomplete="email" />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea required name="message" rows="5"></textarea>
+          </label>
+          <button class="btn" type="submit">Email Me</button>
+          <p id="formMsg" class="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
 
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="#home" class="brand small-brand">
+        <span>Sagrika Sinha</span>
+        
+      </a>
+      <nav aria-label="Footer navigation">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p>© 2026 Sagrika Sinha</p>
+    </div>
+  </footer>
 
-    contactForm.addEventListener("submit", function(event) {
-
-      event.preventDefault();
-
-      const name =
-        document.getElementById("name").value.trim();
-
-      const email =
-        document.getElementById("email").value.trim();
-
-      const message =
-        document.getElementById("message").value.trim();
-
-
-      if (!name || !email || !message) {
-
-        alert("Please fill in all fields.");
-
-        return;
-      }
-
-
-      // Create email content
-
-      const subject =
-        encodeURIComponent(
-          "New Portfolio Contact from " + name
-        );
-
-      const body =
-        encodeURIComponent(
-          "Name: " + name +
-          "\nEmail: " + email +
-          "\n\nMessage:\n" + message
-        );
-
-
-      // Replace this email with your actual email
-
-      const yourEmail =
-        "yourmail@gmail.com";
-
-
-      // Open user's email application
-
-      window.location.href =
-        `mailto:${yourEmail}?subject=${subject}&body=${body}`;
-
-
-      successMessage.style.display =
-        "block";
-
-    });
-
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
